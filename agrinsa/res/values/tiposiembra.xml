@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="listatiposiembra">
+        <item>Directa</item>
+        <item>Boleada</item>
+        <item>Transplante</item>
+        <item>Socas</item>
+    </string-array>    
+</resources>

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scrollbarStyle="insideOverlay" >
+
+        <TextView
+            android:id="@+id/lblLotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbllistalotes"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/lineadivisoria" />
+
+        <Spinner
+            android:id="@+id/spinnerlistalotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="64dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/lblsemestre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblsemestre"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+        
+        <EditText
+            android:id="@+id/txtsemestre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:enabled="false"
+            android:gravity="center_vertical|center_horizontal|center"
+            android:inputType="text"
+            android:paddingBottom="16dp" >
+
+            <requestFocus />
+        </EditText>
+		</LinearLayout>
+
+		<View
+		    android:layout_width="fill_parent"
+		    android:layout_height="1dp"
+		    android:background="@drawable/lineadivisoria" />
+
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/lblnumvisita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblNumerovisita"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtnumerovisita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:enabled="false"
+            android:gravity="center_vertical|center_horizontal|center"
+            android:inputType="text"
+            android:paddingBottom="16dp">
+        </EditText>
+		</LinearLayout>
+
+		<View
+		    android:layout_width="fill_parent"
+		    android:layout_height="1dp"
+		    android:background="@drawable/lineadivisoria" />
+
+        <TextView
+            android:id="@+id/lblfsiembra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblfsiembra"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/lineadivisoria" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/txtfsiembra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:inputType="text" />
+
+            <ImageButton
+                android:id="@+id/btnfsiembra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="abrePicker"
+                android:src="@drawable/calendario" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lblfgermin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblfgermin"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/lineadivisoria" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/txtfgermin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:inputType="text" >
+
+            </EditText>
+
+            <ImageButton
+                android:id="@+id/btnfgermin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="abrePicker"
+                android:src="@drawable/calendario" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lblfcorte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblfcorte"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/lineadivisoria" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+          	<EditText
+          	    android:id="@+id/txtfcorte"
+          	    android:layout_width="wrap_content"
+          	    android:layout_height="wrap_content"
+          	    android:ems="10"
+          	    android:enabled="false"
+          	    android:inputType="text" >
+
+            </EditText>
+
+            <ImageButton
+                android:id="@+id/btnfcorte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="abrePicker"
+                android:src="@drawable/calendario" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lbltipovisita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbltipovisita"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/lineadivisoria" />
+
+        <Spinner
+            android:id="@+id/spinnertipovisita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/listatipovisita"
+            android:paddingLeft="64dp" />
+
+        <TextView
+            android:id="@+id/lblcalilote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblCalificacion"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/lineadivisoria" />
+
+        <Spinner
+            android:id="@+id/spinnercalilote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/listacalificaciones"
+            android:paddingLeft="64dp" />
+
+        <TextView
+            android:id="@+id/lblporquecalif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblporquecalif"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/lineadivisoria" />
+
+         <Spinner
+            android:id="@+id/spinnerporques"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/listaporques"
+            android:paddingLeft="64dp" />
+
+        <TextView
+            android:id="@+id/lbltiposiembras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbltiposiembra"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/lineadivisoria" />
+
+        <Spinner
+            android:id="@+id/spinnertiposiembras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/listatiposiembra"
+            android:paddingLeft="64dp" />
+
+        <TextView
+            android:id="@+id/lblproduccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblproduccion"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/lineadivisoria" />
+
+        <EditText
+            android:id="@+id/txtproduccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number" >
+
+        </EditText>
+
+        <TextView
+            android:id="@+id/lbllugarentrega"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbllugarentrega"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/lineadivisoria" />
+ 		<Spinner
+            android:id="@+id/spinnerlugarentrega"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/lugaresentrega"
+            android:paddingLeft="64dp" />
+        
+        <Button
+            android:id="@+id/btnGuardarvisita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="16dp"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:text="@string/btnguardarvisita"
+            android:textStyle="bold" 
+            android:onClick="guardarvisita"/>
+
+    </LinearLayout>
+
+</ScrollView>

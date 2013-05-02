@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item xmlns:android="http://schemas.android.com/apk/res/android">
+     <item 
+        android:drawable="@drawable/sincronizacionimg" /> 
+	<item 
+        android:drawable="@drawable/servidor" />
+	<item 
+        android:drawable="@drawable/salvar" /> 
+	<item 
+	    android:drawable="@drawable/calendario" />
+	<item 
+        android:drawable="@drawable/salir" /> 		 
+</item>

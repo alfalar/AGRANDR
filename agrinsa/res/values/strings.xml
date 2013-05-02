@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Agrinsa</string>
+    <string name="action_settings">Settings</string>
+    <string name="lblUsuario">Usuario:</string>
+    <string name="lblPassword">Contrasena</string>
+    <string name="lblBoton">Ingresar</string>
+    <string name="title_activity_activity_agrinsa">Opciones</string>
+    <string name="title_activity_activity_crear_lote">ActivityCrearLote</string>
+    <string name="title_activity_activity_visita_lote">ActivityVisitaLote</string>
+    <string name="tab_creacion">Crear nuevo lote</string>
+    <string name="tab_visitas">Hacer visita</string>
+    <string name="title_activity_main">Opciones</string>
+    <string name="lblNumerolote">Lote número:</string>
+    <string name="lblNumerovisita">Visita número:</string>
+    <string name="lblCalificacion">Calificación:</string>
+    <string name="lblCoordenadas">Coordenadas:</string>
+    <string name="lblUsuariocreador">Usuario:</string>
+    <string name="lblLatitud">Latitud:</string>
+    <string name="lblLongitud">Longitud:</string>
+    <string name="agregacoordenada">Agregar coordenada(0)</string>
+    <string name="lblcalmacenadas">0</string>
+    <string name="btnGuardarlote">Guardar Lote</string>
+    <string name="btnCancelarlote">Nuevo Lote</string>
+    <string name="lbllistalotes">Lotes disponibles:</string>
+    <string name="lblsemestre">Semestre:</string>
+    <string name="lblfsiembra">Fecha de siembra:</string>
+    <string name="lblfgermin">Fecha de germinación:</string>
+    <string name="lblfcorte">Fecha de corte:</string>
+    <string name="lbltipovisita">Tipo de visita:</string>
+    <string name="lblporquecalif">Porque?:</string>
+    <string name="lbltiposiembra">Tipo de Siembra:</string>
+    <string name="lblproduccion">Producción:</string>
+    <string name="lbllugarentrega">Lugar de entrega:</string>
+    <string name="btnguardarvisita">Guardar Visita</string>
+    <string name="btnnuevavisita">Nueva Visita</string>
+    <string name="btnfsiembra">+</string>
+    <string name="btnfcorte">+</string>
+    <string name="btnfgermi">+</string>
+    <string name="menu_sincronizacion">Sincronizar</string>
+    <string name="menu_servidor">Servidor</string>
+    <string name="menu_salir">Salir</string>
+    <string name="title_activity_servidor">ServidorActivity</string>
+    <string name="prompt_usuario">Usuario</string>
+    <string name="prompt_password">Password</string>    
+
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="listasemestre">
+        <item>2012A</item>
+        <item>2012B</item>
+        <item>2013A</item>
+        <item>2013B</item>
+        <item>2014A</item>
+        <item>2014B</item>
+        <item>2015A</item>
+        <item>2015B</item>
+    </string-array>    
+</resources>

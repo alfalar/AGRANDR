@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" > 	
+ 	<item android:id="@+id/menu_sincronizar"
+          android:icon="@drawable/sincronizacionimg"
+          android:title="@string/menu_sincronizacion"
+          android:showAsAction="ifRoom|withText" />
+ 	
+ 	<item android:id="@+id/menu_servidor"
+          android:icon="@drawable/servidor"
+          android:title="@string/menu_servidor"
+          android:showAsAction="ifRoom|withText|collapseActionView"/>
+</menu>

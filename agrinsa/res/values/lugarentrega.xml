@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="lugaresentrega">
+        <item>Molino</item>
+        <item>Para semilla</item>
+        <item>Agrinsa</item>
+        <item>Compra venta</item>
+    </string-array>
+</resources>
