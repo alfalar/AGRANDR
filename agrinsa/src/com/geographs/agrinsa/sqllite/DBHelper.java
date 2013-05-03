@@ -600,6 +600,16 @@ public class DBHelper extends SQLiteOpenHelper {
 		return "OK";
 	}
 	
+	public String eliminarDominios() {
+		try {
+			db.delete(DominiosTable.NAME, null, null);
+			return "OK";
+		} catch (Exception e) {
+			return e.getMessage();
+		}
+
+	}
+	
 	/**
 	 * Retorna los valores de un dominio
 	 * @param dominiov

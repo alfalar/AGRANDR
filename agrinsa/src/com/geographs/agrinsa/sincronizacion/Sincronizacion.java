@@ -113,6 +113,7 @@ public class Sincronizacion extends AsyncTask<Void, Void, String> {
 			Type listadominio = new TypeToken<List<Dominio>>(){}.getType();
 			List<Dominio> dominio=gson.fromJson(response,listadominio);
 			if(dominio.size()>0){
+				if(!consultas.eliminarDominios().equalsIgnoreCase("OK"))respuestausuario+="Error eliminando dominios\n";
 				int i=0;
 				for(Dominio dom: dominio){
 					String r1=consultas.creardominio(dom);
