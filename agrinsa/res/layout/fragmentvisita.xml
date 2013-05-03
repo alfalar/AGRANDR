@@ -210,8 +210,7 @@
         <Spinner
             android:id="@+id/spinnertipovisita"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:entries="@array/listatipovisita"
+            android:layout_height="wrap_content"            
             android:paddingLeft="64dp" />
 
         <TextView
@@ -230,8 +229,7 @@
         <Spinner
             android:id="@+id/spinnercalilote"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:entries="@array/listacalificaciones"
+            android:layout_height="wrap_content"            
             android:paddingLeft="64dp" />
 
         <TextView
@@ -251,7 +249,6 @@
             android:id="@+id/spinnerporques"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:entries="@array/listaporques"
             android:paddingLeft="64dp" />
 
         <TextView
@@ -271,7 +268,6 @@
             android:id="@+id/spinnertiposiembras"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:entries="@array/listatiposiembra"
             android:paddingLeft="64dp" />
 
         <TextView
@@ -312,7 +308,6 @@
             android:id="@+id/spinnerlugarentrega"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:entries="@array/lugaresentrega"
             android:paddingLeft="64dp" />
         
         <Button

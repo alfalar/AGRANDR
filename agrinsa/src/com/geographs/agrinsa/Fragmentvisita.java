@@ -26,6 +26,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.geographs.agrinsa.business.Dominio;
 import com.geographs.agrinsa.business.Lote;
 import com.geographs.agrinsa.business.Visita;
 import com.geographs.agrinsa.sqllite.DBHelper;
@@ -89,6 +90,11 @@ public class Fragmentvisita extends Fragment implements
 				R.id.spinnerlugarentrega);		
 		consultas = new DBHelper(this.getActivity());
 		poblaSpinnerLotes();
+		poblaSpinnerTipoVisita();
+		poblaSpinnerCalificacion();
+		poblaSpinnerPorque();
+		poblaSpinnerTipoSiembra();
+		poblaSpinnerLugarentrega();
 	}
 
 	public void onDateSet(DatePicker view, int year, int month, int day) {
@@ -129,7 +135,9 @@ public class Fragmentvisita extends Fragment implements
 		nf.show(this.getActivity().getSupportFragmentManager(),
 				"datePicker");
 	}
-	
+	/**
+	 * Llena combo de lotes
+	 */
 	public void poblaSpinnerLotes(){
 		combolotes = (Spinner) this.getActivity().findViewById(
 				R.id.spinnerlistalotes);
@@ -152,6 +160,76 @@ public class Fragmentvisita extends Fragment implements
 			dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 			combolotes.setAdapter(dataAdapter);
 	}
+	/**
+	 *  Llena combo de Tipos de visita
+	 */
+	public void poblaSpinnerTipoVisita(){		
+		List<Dominio> tipovisitadom=consultas.getDominio("DomTipoVisita");
+		List<String> tipovisitastr=new ArrayList<String>(); 
+		for(Dominio tipovisita:tipovisitadom){
+			tipovisitastr.add(tipovisita.getCode()+"-"+ tipovisita.getValue());
+		}
+		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this.getActivity().getBaseContext(),
+				android.R.layout.simple_spinner_item, tipovisitastr);
+			dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+			combotipovisita.setAdapter(dataAdapter);
+	}	
+	/**
+	 *  Llena combo de Calificacion del lote
+	 */
+	public void poblaSpinnerCalificacion(){		
+		List<Dominio> calificacionesdom=consultas.getDominio("DomCalifiLote");
+		List<String> calificacionesstr=new ArrayList<String>(); 
+		for(Dominio califica:calificacionesdom){
+			calificacionesstr.add(califica.getCode()+"-"+ califica.getValue());
+		}
+		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this.getActivity().getBaseContext(),
+				android.R.layout.simple_spinner_item, calificacionesstr);
+			dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+			combocalificacion.setAdapter(dataAdapter);
+	}	
+	/**
+	 *  Llena combo de Porque califica
+	 */
+	public void poblaSpinnerPorque(){		
+		List<Dominio> porquedom=consultas.getDominio("DomPQCalifica");
+		List<String> porquestr=new ArrayList<String>(); 
+		for(Dominio porque:porquedom){
+			porquestr.add(porque.getCode()+"-"+ porque.getValue());
+		}
+		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this.getActivity().getBaseContext(),
+				android.R.layout.simple_spinner_item, porquestr);
+			dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+			comboporque.setAdapter(dataAdapter);
+	}	
+	/**
+	 *  Llena combo de Tipo de siembra
+	 */
+	public void poblaSpinnerTipoSiembra(){		
+		List<Dominio> tiposiembradom=consultas.getDominio("DomSiembra");
+		List<String> tiposiembrastr=new ArrayList<String>(); 
+		for(Dominio ts:tiposiembradom){
+			tiposiembrastr.add(ts.getCode()+"-"+ ts.getValue());
+		}
+		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this.getActivity().getBaseContext(),
+				android.R.layout.simple_spinner_item, tiposiembrastr);
+			dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+			combotiposiembra.setAdapter(dataAdapter);
+	}	
+	/**
+	 *  Llena combo de lugar de entrega
+	 */
+	public void poblaSpinnerLugarentrega(){		
+		List<Dominio> lugarentregadom=consultas.getDominio("DomLugarEntrega");
+		List<String> lugarentregastr=new ArrayList<String>(); 
+		for(Dominio lugar:lugarentregadom){
+			lugarentregastr.add(lugar.getCode()+"-"+ lugar.getValue());
+		}
+		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this.getActivity().getBaseContext(),
+				android.R.layout.simple_spinner_item, lugarentregastr);
+			dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+			lugarentrega.setAdapter(dataAdapter);
+	}	
 	
 	/**
 	 * 
