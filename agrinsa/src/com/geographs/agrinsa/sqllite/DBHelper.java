@@ -440,7 +440,7 @@ public class DBHelper extends SQLiteOpenHelper {
 				LoteTable.LOTE_ID, LoteTable.NOMBRE_LOTE, LoteTable.AGRICULTOR,
 				LoteTable.FECHACORTE, LoteTable.FECHAGERMINACION,
 				LoteTable.FECHASIEMBRA, LoteTable.SEMESTRE, LoteTable.SIEMBRA,
-				LoteTable.NUMVISITA }, where, null, null, null, null);
+				LoteTable.NUMVISITA }, where, null, null, null, LoteTable.AGRICULTOR);
 		if (cursor.moveToFirst()) {
 			do {
 				Lote lote = new Lote();
