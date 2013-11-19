@@ -6,6 +6,9 @@ public class NuevosLotes {
 private int lotenuevoid;
 private int califilote;
 private int usuarioid;
+private String agricultor;
+private String nombrelote;
+
 private ArrayList<Coordenadas> coordenadas;
 public int getLotenuevoid() {
 	return lotenuevoid;
@@ -30,6 +33,18 @@ public ArrayList<Coordenadas> getCoordenadas() {
 }
 public void setCoordenadas(ArrayList<Coordenadas> coordenadas) {
 	this.coordenadas = coordenadas;
+}
+public String getAgricultor() {
+	return agricultor;
+}
+public void setAgricultor(String agricultor) {
+	this.agricultor = agricultor;
+}
+public String getNombrelote() {
+	return nombrelote;
+}
+public void setNombrelote(String nombrelote) {
+	this.nombrelote = nombrelote;
 }
 
 

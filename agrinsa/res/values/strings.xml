@@ -44,5 +44,6 @@
     <string name="title_activity_servidor">ServidorActivity</string>
     <string name="prompt_usuario">Usuario</string>
     <string name="prompt_password">Password</string>    
+    <string name="agricultornlote">Nombre Agricultor:</string>
 
 </resources>

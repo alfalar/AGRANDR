@@ -26,6 +26,27 @@
         android:paddingLeft="64dp" />
 
     <TextView
+        android:id="@+id/lblagricultornl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/agricultornlote"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/lineadivisoria" />
+
+    <EditText
+        android:id="@+id/txtagricultornlote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:enabled="true"
+        android:inputType="text" />
+    
+    <TextView
         android:id="@+id/lbllatitud"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

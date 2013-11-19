@@ -31,6 +31,7 @@ public class Fragmentcrearlote extends Fragment implements LocationListener {
 	private Location lastLocation;
 	EditText textolatitud;
 	EditText textolongitud;
+	EditText textoagricultor;
 	Spinner calificaciones;
 	Button aceptar;
 	Button agregar;
@@ -52,6 +53,9 @@ public class Fragmentcrearlote extends Fragment implements LocationListener {
 		textolatitud = (EditText) this.getView().findViewById(R.id.txtLatitud);
 		textolongitud = (EditText) this.getView()
 				.findViewById(R.id.txtLongitud);
+		textoagricultor = (EditText) this.getView()
+				.findViewById(R.id.txtagricultornlote);
+
 		aceptar = (Button) this.getView().findViewById(
 				R.id.btnGuardar);
 		agregar = (Button) this.getView().findViewById(
@@ -123,8 +127,8 @@ public class Fragmentcrearlote extends Fragment implements LocationListener {
 
 	public void guardarnuevolote(View view) {
 		int calificacion = this.calificaciones.getSelectedItemPosition()+1;
-		
-		if (consultas.guardarNuevoLote(coordenadas, calificacion)) {
+		String agricultorlote=this.textoagricultor.getText().toString();
+		if (consultas.guardarNuevoLote(coordenadas, calificacion,agricultorlote,"")) {
 			new AlertDialog.Builder(this.getActivity())
 					.setTitle("Mensaje de confirmacion")
 					.setMessage("El nuevo lote se ha creado satisfactoriamente")
