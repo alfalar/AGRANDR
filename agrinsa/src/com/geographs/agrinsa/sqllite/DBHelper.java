@@ -55,11 +55,8 @@ public class DBHelper extends SQLiteOpenHelper {
 		private static final String VISITA = "numvisita";
 		private static final String CALIFICACION = "califilote";
 		private static final String USUARIO_ID = "usuarioid";
-<<<<<<< HEAD
-=======
 		private static final String AGRICULTOR = "valor1";
 		private static final String NOMBRELOTE = "valor2";
->>>>>>> bd87e57e445be984b44e4578020360e3c0860181
 	}
 
 	private static class CoordenadasTable {
@@ -139,17 +136,10 @@ public class DBHelper extends SQLiteOpenHelper {
 				+ ") VALUES(" + "'IPWS','http://192.168.0.2:8080/')");
 		// CREACION DE LA TABLA DE NUEVOS LOTES
 		db.execSQL(String
-<<<<<<< HEAD
-				.format("CREATE TABLE %s (%s INTEGER PRIMARY KEY, %s INTEGER, %s INTEGER,%s INTEGER)",
-						NuevoLoteTable.NAME, NuevoLoteTable.LOTE_ID,
-						NuevoLoteTable.VISITA, NuevoLoteTable.CALIFICACION,
-						NuevoLoteTable.USUARIO_ID));
-=======
 				.format("CREATE TABLE %s (%s INTEGER PRIMARY KEY, %s INTEGER, %s INTEGER,%s INTEGER, %s TEXT, %s TEXT)",
 						NuevoLoteTable.NAME, NuevoLoteTable.LOTE_ID,
 						NuevoLoteTable.VISITA, NuevoLoteTable.CALIFICACION,
 						NuevoLoteTable.USUARIO_ID,NuevoLoteTable.AGRICULTOR,NuevoLoteTable.NOMBRELOTE));
->>>>>>> bd87e57e445be984b44e4578020360e3c0860181
 		// CREACION DE LA TABLA DE COORDENADAS
 		db.execSQL(String.format(
 				"CREATE TABLE %s (%s INTEGER, %s REAL, %s REAL)",
@@ -300,16 +290,7 @@ public class DBHelper extends SQLiteOpenHelper {
 	 * @return
 	 */
 	public boolean guardarNuevoLote(ArrayList<Coordenadas> coordenadas,
-<<<<<<< HEAD
-			int calificacion) {
-		try {
-			String sql = "INSERT INTO " + NuevoLoteTable.NAME + " ("
-					+ NuevoLoteTable.CALIFICACION + ", "
-					+ NuevoLoteTable.USUARIO_ID + ", " + NuevoLoteTable.VISITA
-					+ ") VALUES(" + calificacion + "," + Constantes.usuarioid_actual
-					+ ",0" + ")";
-=======
-			int calificacion, String agricultor, String nombrelote) {
+		int calificacion, String agricultor, String nombrelote) {
 		try {
 			String sql = "INSERT INTO " + NuevoLoteTable.NAME + " ("
 					+ NuevoLoteTable.CALIFICACION + ", "
@@ -319,7 +300,6 @@ public class DBHelper extends SQLiteOpenHelper {
 					+ NuevoLoteTable.NOMBRELOTE 
 					+ ") VALUES(" + calificacion + "," + Constantes.usuarioid_actual
 					+ ",0,'"+agricultor+"','"+nombrelote+"')";
->>>>>>> bd87e57e445be984b44e4578020360e3c0860181
 			db.execSQL(sql);
 			int maxid = getMaximoIdLote();
 			Log.d("MAXIMO ID LOTE:", String.valueOf(maxid));
@@ -346,22 +326,15 @@ public class DBHelper extends SQLiteOpenHelper {
 		ArrayList<NuevosLotes> nuevoslotes = new ArrayList<NuevosLotes>();
 		Cursor cursor = this.db.query(NuevoLoteTable.NAME, new String[] {
 				NuevoLoteTable.LOTE_ID, NuevoLoteTable.CALIFICACION,
-<<<<<<< HEAD
-				NuevoLoteTable.USUARIO_ID }, null, null, null, null, null);
-=======
 				NuevoLoteTable.USUARIO_ID, NuevoLoteTable.AGRICULTOR,NuevoLoteTable.NOMBRELOTE}, null, null, null, null, null);
->>>>>>> bd87e57e445be984b44e4578020360e3c0860181
 		if (cursor.moveToFirst()) {
 			do {
 				NuevosLotes nuevolote = new NuevosLotes();
 				nuevolote.setLotenuevoid(cursor.getInt(0));
 				nuevolote.setCalifilote(cursor.getInt(1));
 				nuevolote.setUsuarioid(cursor.getInt(2));
-<<<<<<< HEAD
-=======
 				nuevolote.setAgricultor(cursor.getString(3));
 				nuevolote.setNombrelote(cursor.getString(4));
->>>>>>> bd87e57e445be984b44e4578020360e3c0860181
 				ArrayList<Coordenadas> coordenadas = getCoordenadasLote(cursor
 						.getInt(0));
 				nuevolote.setCoordenadas(coordenadas);
