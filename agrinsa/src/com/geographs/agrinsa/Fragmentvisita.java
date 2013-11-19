@@ -237,7 +237,7 @@ public class Fragmentvisita extends Fragment implements
 	 */
 	public void guardarvisita(View view) {
 		String mensajeerror="";
-		if(txtsiembra.getText().length()==0){
+		/*if(txtsiembra.getText().length()==0){
 			mensajeerror+="La fecha de siembra es obligatoria\n";
 		}
 		if(txtgerminacion.getText().length()==0){
@@ -246,6 +246,7 @@ public class Fragmentvisita extends Fragment implements
 		if(txtcorte.getText().length()==0){
 			mensajeerror+="La fecha de corta es obligatoria\n";
 		}
+		*/
 		double produccion=0;
 		if(txtproduccion.getText().toString().length()>0){
 			produccion=new Double(txtproduccion.getText().toString());
@@ -280,7 +281,8 @@ public class Fragmentvisita extends Fragment implements
 			visita.setFechavisita(fecha);
 			String resultado=consultas.nuevavisita(visita);
 			if(resultado.equalsIgnoreCase("OK")){
-				resultado=consultas.actualizaVisita(loteseleccionado.getLoteid(), loteseleccionado.getNumvisita()+1);
+				resultado=consultas.actualizaVisita(loteseleccionado.getLoteid(), 
+						loteseleccionado.getNumvisita()+1);
 				new AlertDialog.Builder(this.getActivity())
 				.setTitle("Mensaje de confirmacion")
 				.setMessage("La nueva visita se ha creado satisfactoriamente")
